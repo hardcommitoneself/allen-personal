@@ -5,6 +5,147 @@ import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 
 import { SiLaravel, SiVuedotjs, SiTailwindcss, SiMysql } from "react-icons/si";
 
+import {
+  Experience,
+  ExperienceType,
+  TechStack,
+  TechStackType,
+} from "@/components";
+
+const exps: ExperienceType[] = [
+  {
+    role: "Laravel Full Stack Engineer",
+    company: "Tred",
+    color: "bg-red-500",
+    type: "FULL",
+    isRemote: true,
+    from: "May 2019",
+    to: "Jan 2023",
+    duration: "3 yrs 9 mos",
+    detail: [
+      `Built social application(For US high school and
+        university's athletes) using TALL(Tailwind CSS +
+        Alpine.js + Livewire + Laravel) as well as integrating
+        third-party SAAS APIs like Stripe, Twilio, IpBase, Spotify
+        etc
+      `,
+      `Built a financial auditing system for Stripe payments
+        using Laravel. Client payment reconciliation was performed
+        between the application database and Stripe REST API
+      `,
+      `Maintained internal apps and implemented core features
+        by co-working with cross-functional team
+      `,
+    ],
+  },
+  {
+    role: "Full Stack Developer",
+    company: "IWave Inc",
+    color: "bg-teal-500",
+    type: "FULL",
+    isRemote: false,
+    from: "Feb 2015",
+    to: "Mar 2019",
+    duration: "3 yrs 5 mos",
+    detail: [
+      `Developed and maintained websites independently, creating landing and checkout pages for marketing companies, integrated with sales CRMs (Konnektive CRM) and Payment Processors (NMI, Paypal, Braintree, Stripe)
+      `,
+      ` Also created internal tools for managing marketing campaign traffic links that routed hundreds of thousands of clicks daily.
+      `,
+    ],
+  },
+  {
+    role: "Software Developer",
+    company: "Yondu Inc",
+    color: "bg-orange-500",
+    type: "FULL",
+    isRemote: false,
+    from: "Feb 2014",
+    to: "Jan 2015",
+    duration: "1 yrs 1 mos",
+    detail: [],
+  },
+];
+
+const stacks: TechStackType[] = [
+  {
+    name: "Laravel PHP",
+    icon: <SiLaravel size="28px" color="white" />,
+    color: "bg-red-500",
+    description: (
+      <>
+        For almost 9 years I have been using Laravel as the backend framework on
+        nearly all my projects. I am a{" "}
+        <span className="text-teal-500 underline underline-offset-2">
+          Laravel Certificated Developer
+        </span>{" "}
+        and passed the certification exam with the Laravel organization. Through
+        out my time working with Laravel I&apos;ve touched almost every part of
+        their development ecosystem; using the authentication scaffolding,
+        payment scaffolding, deployment management, and more...
+      </>
+    ),
+    badges: [
+      "Livewire",
+      "Jetstream",
+      "Nova",
+      "Sactum",
+      "Echo",
+      "Cashier",
+      "Forge",
+      "Filament",
+    ],
+    versions: ["Version 9", "Version 10"],
+  },
+  {
+    name: "Vue",
+    icon: <SiVuedotjs size="28px" color="white" />,
+    color: "bg-emerald-500",
+    description: (
+      <>
+        For advanced front-ends I almost always use Vue JS, this year moving all
+        my projects to the latest release version 3 using the composition API. I
+        am experienced using many of the popular Vue plugins and frameworks.
+      </>
+    ),
+    badges: ["Quasar", "Vueify", "Vue Formulate", "Inertia JS", "Headless UI"],
+    versions: ["Version 3"],
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss size="28px" color="white" />,
+    color: "bg-sky-500",
+    description: (
+      <>
+        I started using Tailwind CSS since it&apos;s launch in 2018 and it
+        quickly became a staple in all my projects. I regularly use it when
+        creating custom components because I prefer to use native elements with
+        styling over javascript based components when possible. Using Purge and
+        JIT compiling to ensure the smallest file size and fatest page load
+        times.
+      </>
+    ),
+    badges: ["Daisy", "Flowbite", "Mamba UI", "Headless UI"],
+    versions: [],
+  },
+  {
+    name: "MySQL",
+    icon: <SiMysql size="28px" color="white" />,
+    color: "bg-cyan-900",
+    description: (
+      <>
+        Nearly all of the projects I have worked on use relational databases
+        with MySQL, typically used with an ORM like Laravel Eloquent for
+        managing relationships. I&apos;m comfortable using advanced data
+        structures like pivot table, polymorphic relationships, nested-set
+        relationships, recursive relationships, and more...
+      </>
+    ),
+    badges: [],
+    versions: [],
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-100">
@@ -86,198 +227,9 @@ export default function Home() {
               </p>
 
               {/* stack */}
-              {/* --- Laravel --- */}
-              <div className="flex gap-5">
-                {/* icon */}
-                <div className="inline-flex items-center justify-center min-w-[56px] w-14 h-14 rounded overflow-hidden bg-red-500">
-                  <SiLaravel size="28px" color="white" />
-                </div>
-
-                {/* content */}
-                <div className="flex flex-col gap-3">
-                  {/* header */}
-                  <div className="flex items-center gap-3">
-                    <h1 className="text-2xl font-medium">Laravel PHP</h1>
-                    <div className="inline-flex items-center h-7 justify-center uppercase bg-teal-500/10 text-teal-500 font-bold text-sm px-2">
-                      Version 9
-                    </div>
-                    <div className="inline-flex items-center h-7 justify-center uppercase bg-teal-500/10 text-teal-500 font-bold text-sm px-2">
-                      Version 10
-                    </div>
-                  </div>
-
-                  {/* p */}
-                  <p className="text-gray-500 text-lg">
-                    For almost 9 years I have been using Laravel as the backend
-                    framework on nearly all my projects. I am a{" "}
-                    <span className="text-teal-500 underline underline-offset-2">
-                      Laravel Certificated Developer
-                    </span>{" "}
-                    and passed the certification exam with the Laravel
-                    organization. Through out my time working with Laravel
-                    I&apos;ve touched almost every part of their development
-                    ecosystem; using the authentication scaffolding, payment
-                    scaffolding, deployment management, and more...
-                  </p>
-
-                  {/* badges */}
-                  <div className="flex items-center gap-3">
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Livewire
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Jetstream
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Nova
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Sactum
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Echo
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Cashier
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Forge
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Filament
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* --- Vue --- */}
-              <div className="flex gap-5">
-                {/* icon */}
-                <div className="inline-flex items-center justify-center min-w-[56px] w-14 h-14 rounded overflow-hidden bg-emerald-500">
-                  <SiVuedotjs size="28px" color="white" />
-                </div>
-
-                {/* content */}
-                <div className="flex flex-col gap-3">
-                  {/* header */}
-                  <div className="flex items-center gap-3">
-                    <h1 className="text-2xl font-medium">Vue</h1>
-                    <div className="inline-flex items-center h-7 justify-center uppercase bg-teal-500/10 text-teal-500 font-bold text-sm px-2">
-                      Version 3
-                    </div>
-                  </div>
-
-                  {/* p */}
-                  <p className="text-gray-500 text-lg">
-                    For advanced front-ends I almost always use Vue JS, this
-                    year moving all my projects to the latest release version 3
-                    using the composition API. I am experienced using many of
-                    the popular Vue plugins and frameworks.
-                  </p>
-
-                  {/* badges */}
-                  <div className="flex items-center gap-3">
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Quasar
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Vueify
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Vue Formulate
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Inertia JS
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Headless UI
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* --- Tailwind CSS --- */}
-              <div className="flex gap-5">
-                {/* icon */}
-                <div className="inline-flex items-center justify-center min-w-[56px] w-14 h-14 rounded overflow-hidden bg-sky-500">
-                  <SiTailwindcss size="28px" color="white" />
-                </div>
-
-                {/* content */}
-                <div className="flex flex-col gap-3">
-                  {/* header */}
-                  <div className="flex items-center gap-3">
-                    <h1 className="text-2xl font-medium">Tailwind CSS</h1>
-                  </div>
-
-                  {/* p */}
-                  <p className="text-gray-500 text-lg">
-                    I started using Tailwind CSS since it&atops;s launch in 2018
-                    and it quickly became a staple in all my projects. I
-                    regularly use it when creating custom components because I
-                    prefer to use native elements with styling over javascript
-                    based components when possible. Using Purge and JIT
-                    compiling to ensure the smallest file size and fatest page
-                    load times.
-                  </p>
-
-                  {/* badges */}
-                  <div className="flex items-center gap-3">
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Daisy
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Flowbite
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Mamba UI
-                    </div>
-
-                    <div className="relative inline-flex items-center text-sm h-6 pl-5 pr-2 justify-center rounded bg-gray-500/10 text-gray-800 before:content-[''] before:absolute before:w-2 before:h-2 before:rounded-full before:bg-gray-500 before:top-2 before:left-2">
-                      Headless UI
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* --- My SQL --- */}
-              <div className="flex gap-5">
-                {/* icon */}
-                <div className="inline-flex items-center justify-center min-w-[56px] w-14 h-14 rounded overflow-hidden bg-cyan-900">
-                  <SiMysql size="28px" color="white" />
-                </div>
-
-                {/* content */}
-                <div className="flex flex-col gap-3">
-                  {/* header */}
-                  <div className="flex items-center gap-3">
-                    <h1 className="text-2xl font-medium">MySQL</h1>
-                  </div>
-
-                  {/* p */}
-                  <p className="text-gray-500 text-lg">
-                    Nearly all of the projects I have worked on use relational
-                    databases with MySQL, typically used with an ORM like
-                    Laravel Eloquent for managing relationships. I&atops;m
-                    comfortable using advanced data structures like pivot table,
-                    polymorphic relationships, nested-set relationships,
-                    recursive relationships, and more...
-                  </p>
-                </div>
-              </div>
+              {stacks.map((stack, index) => (
+                <TechStack key={index} {...stack} />
+              ))}
 
               {/* additional summary */}
               <p className="text-gray-800 text-lg">
@@ -287,6 +239,16 @@ export default function Home() {
                 adaptors to bridge between these technologies or devleop custom
                 solutions to archive the goal of that requirement.
               </p>
+            </div>
+
+            {/* work experience */}
+            <div className="flex flex-col space-y-5">
+              <h1 className="text-3xl font-semibold">Work Experience</h1>
+
+              {/* companies */}
+              {exps.map((exp, index) => (
+                <Experience key={index} {...exp} />
+              ))}
             </div>
           </div>
         </div>
