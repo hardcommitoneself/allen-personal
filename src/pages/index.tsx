@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/24/solid";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 
@@ -10,6 +9,8 @@ import {
   ExperienceType,
   TechStack,
   TechStackType,
+  Project,
+  ProjectType,
 } from "@/components";
 
 const exps: ExperienceType[] = [
@@ -146,6 +147,85 @@ const stacks: TechStackType[] = [
   },
 ];
 
+const projects: ProjectType[] = [
+  {
+    title: "Leadgen Funnel Builder",
+    description: `LiveLeads was created to easily build advanced marketing
+    funnels for collecting user information with custom
+    questions. Quiz steps are dynamically routed using a
+    nested-data-structure and multiple buyers can be
+    integrated with field mapping to match their data
+    requirements.`,
+    challenge: `"The most challenging aspect of this project was
+    implementing a nested-set data structure to controle the
+    flow of steps in each quiz."`,
+    stacks: [
+      "Laravel",
+      "Livewire",
+      "Alpine JS",
+      "Vue JS",
+      "Quasar",
+      "Tailwind CSS",
+      "AMCharts",
+      "Draggable JS",
+    ],
+    integrations: [
+      "Github",
+      "Transparently",
+      "Trellis(Savvy)",
+      "LeadProsper",
+      "Leadspedia",
+      "PX Exchange",
+    ],
+    image: "livelead",
+  },
+  {
+    title: "Marketing Campaign Management",
+    description: `Bidobo is an internal tool that controlled dozens of marketing campaigns at once; tracking
+      live incoming traffic, daily budgets, spend per account, and revenue breakdowns. With the help of this tool,
+      we were able to optimize the workflow and scale campaigns to total for $30k+ in spend per day.
+    `,
+    challenge: `"My role was as lead developer and also managed two developers on this project."`,
+    stacks: [
+      "Laravel",
+      "Vue JS",
+      "Electron JS",
+      "Bootstrap CSS",
+      "Chrome Extension",
+    ],
+    integrations: [
+      "Cake Marketing",
+      "HasOffers",
+      "Telegram",
+      "ImproveMX",
+      "Google Sheets",
+      "Zeus Track",
+    ],
+    image: "bidobo",
+  },
+  {
+    title: "Advertising Account Automation",
+    description: `Affiliomash was an internal tool used to manage hundreds of advertising accounts at once and
+      completely automate their creation. The dashboard displays the virtual machine status, monitored contact
+      details, and transactions linked to each account.
+    `,
+    challenge: `"All the automation is done with custom hardware and integrations. More about this project can be discussed privately."`,
+    stacks: ["Laravel", "Vue JS", "Bootstrap CSS"],
+    integrations: [
+      "Cake Marketing",
+      "HasOffers",
+      "Laravel Forge",
+      "Google Sheets",
+      "Handsontable",
+      "Photopea",
+      "Virtual Box",
+      "SMG Gateway",
+      "OFX Parser",
+    ],
+    image: "affilio-smash",
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-100">
@@ -241,13 +321,28 @@ export default function Home() {
               </p>
             </div>
 
-            {/* work experience */}
+            {/* Work experience */}
             <div className="flex flex-col space-y-5">
               <h1 className="text-3xl font-semibold">Work Experience</h1>
 
               {/* companies */}
               {exps.map((exp, index) => (
                 <Experience key={index} {...exp} />
+              ))}
+            </div>
+
+            {/* Recent Projects */}
+            <div className="flex flex-col space-y-5">
+              <h1 className="text-3xl font-semibold">Recent Projects</h1>
+              <p className="text-gray-800 text-lg">
+                These are the most notable projects I have designed and
+                developed in the marketing category. Listed are some of the
+                technologies and integrations used in the development of these
+                projects.
+              </p>
+
+              {projects.map((project, index) => (
+                <Project key={index} {...project} />
               ))}
             </div>
           </div>
