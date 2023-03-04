@@ -84,6 +84,7 @@ export default function Home() {
                 this is my preferred stack when working on projects. This is
                 just a brief list.
               </p>
+
               {/* stack */}
               {/* --- Laravel --- */}
               <div className="flex gap-5">
@@ -277,6 +278,15 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+
+              {/* additional summary */}
+              <p className="text-gray-800 text-lg">
+                I&apos;m an extremely quick learner and have worked on many
+                projects where I&apos;ve had to learn a new stack or technology
+                to integrate within the current project. Many times creating
+                adaptors to bridge between these technologies or devleop custom
+                solutions to archive the goal of that requirement.
+              </p>
             </div>
           </div>
         </div>
