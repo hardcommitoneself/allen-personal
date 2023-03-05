@@ -11,6 +11,7 @@ import {
   TechStackType,
   Project,
   ProjectType,
+  Header,
 } from "@/components";
 
 const exps: ExperienceType[] = [
@@ -234,44 +235,13 @@ export default function Home() {
         {/* content */}
         <div className="flex flex-col bg-white rounded border border-gray-100">
           {/* header */}
-          <div className="w-full px-20 pt-10 pb-10 flex justify-between border-b border-black/10">
-            {/* left - name, role, location, remote */}
-            <div className="flex flex-col">
-              <h1 className="text-5xl font-bold">Jeremy Holstein</h1>
-              <span className="text-lg text-gray-500 mt-3">
-                Laravel, Vue Certificated Developer
-              </span>
-              <div className="flex items-center space-x-3 mt-2">
-                {/* remote chip */}
-                <div className="inline-flex items-center justify-center uppercase bg-teal-500/10 text-teal-500 font-bold text-sm px-2">
-                  Remote
-                </div>
-
-                {/* location */}
-                <div className="flex items-center space-x-1">
-                  <MapPinIcon className="w-5 h-5 text-teal-500" />
-                  <span className="text-teal-500 font-bold">
-                    Orlando, Florida
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* right - phone, email, social */}
-            <div className="flex flex-col justify-end space-y-3 text-gray-500">
-              {/* phone */}
-              <div className="flex items-center space-x-2">
-                <PhoneIcon className="w-5 h-5" />
-                <span>{"(315) 715 8471"}</span>
-              </div>
-
-              {/* mail */}
-              <div className="flex items-center space-x-2">
-                <EnvelopeIcon className="w-5 h-5" />
-                <span>{"jjjrmy@gmail.com"}</span>
-              </div>
-            </div>
-          </div>
+          <Header
+            name="Jeremy Holstein"
+            role="Laravel, Vue Certificated Developer"
+            location="Orlando, Florida"
+            phone="(315) 715 8471"
+            email="jjjrmy@gmail.com"
+          />
 
           {/* body */}
           <div className="flex flex-col p-20 space-y-14">
