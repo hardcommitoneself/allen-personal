@@ -16,7 +16,7 @@ import {
 
 const exps: ExperienceType[] = [
   {
-    role: "Laravel Full Stack Engineer",
+    role: "Senior Laravel Full Stack Engineer",
     company: "Techno Labs",
     color: "bg-red-500",
     type: "FULL",
@@ -24,21 +24,7 @@ const exps: ExperienceType[] = [
     from: "May 2019",
     to: "Jan 2023",
     duration: "3 yrs 9 mos",
-    detail: [
-      `Built social application(For US high school and
-        university's athletes) using TALL(Tailwind CSS +
-        Alpine.js + Livewire + Laravel) as well as integrating
-        third-party SAAS APIs like Stripe, Twilio, IpBase, Spotify
-        etc
-      `,
-      `Built a financial auditing system for Stripe payments
-        using Laravel. Client payment reconciliation was performed
-        between the application database and Stripe REST API
-      `,
-      `Maintained internal apps and implemented core features
-        by co-working with cross-functional team
-      `,
-    ],
+    detail: [],
   },
   {
     role: "Full Stack Developer",
@@ -49,12 +35,7 @@ const exps: ExperienceType[] = [
     from: "Feb 2015",
     to: "Mar 2019",
     duration: "3 yrs 5 mos",
-    detail: [
-      `Developed and maintained websites independently, creating landing and checkout pages for marketing companies, integrated with sales CRMs (Konnektive CRM) and Payment Processors (NMI, Paypal, Braintree, Stripe)
-      `,
-      ` Also created internal tools for managing marketing campaign traffic links that routed hundreds of thousands of clicks daily.
-      `,
-    ],
+    detail: [],
   },
   {
     role: "Software Developer",
@@ -250,9 +231,8 @@ export default function Home() {
               <h1 className="text-3xl font-semibold">About Me</h1>
               <p className="text-gray-800 text-lg">
                 I have worked in web development for nearly 9 years as a Full
-                Stack Developer in addition to running Online Marketing
-                Campaigns. I&apos;ve always had a love for technology so taking
-                the initiative to learn Full Stack Web Development has
+                Stack Developer. I&apos;ve always had a love for technology so
+                taking the initiative to learn Full Stack Web Development has
                 definitely been one of the most challenging yet amazing
                 decisions I&apos;ve ever made. Contributing to web development
                 projects and overcoming both personal and professional
@@ -262,8 +242,8 @@ export default function Home() {
                 anything is possible with time and dedication. I can&apos;t wait
                 to see where this road take me and I wouldn&apos;t have it any
                 other way! When I&apos;m not on the job, I love hiking with my
-                dog Ziyi, working my way through every recipe in the family
-                cookbook, and indulging my love for seeing new places.
+                dog, working my way through every recipe in the family cookbook,
+                and indulging my love for seeing new places.
               </p>
             </div>
 
