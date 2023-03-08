@@ -17,7 +17,7 @@ import {
 const exps: ExperienceType[] = [
   {
     role: "Laravel Full Stack Engineer",
-    company: "Tred",
+    company: "Techno Labs",
     color: "bg-red-500",
     type: "FULL",
     isRemote: true,
@@ -42,7 +42,7 @@ const exps: ExperienceType[] = [
   },
   {
     role: "Full Stack Developer",
-    company: "IWave Inc",
+    company: "Intellectsoft",
     color: "bg-teal-500",
     type: "FULL",
     isRemote: false,
@@ -58,7 +58,7 @@ const exps: ExperienceType[] = [
   },
   {
     role: "Software Developer",
-    company: "Yondu Inc",
+    company: "Quality Plus Services Inc",
     color: "bg-orange-500",
     type: "FULL",
     isRemote: false,
@@ -236,11 +236,11 @@ export default function Home() {
         <div className="flex flex-col bg-white rounded border border-gray-100">
           {/* header */}
           <Header
-            name="Jeremy Holstein"
+            name="Tony Incitti"
             role="Laravel, Vue Certificated Developer"
-            location="Orlando, Florida"
+            location="1128 Johnson Ave, Petersburg, VA, US"
             phone="(315) 715 8471"
-            email="jjjrmy@gmail.com"
+            email="ti.tonyincitti@gmail.com"
           />
 
           {/* body */}
@@ -289,6 +289,19 @@ export default function Home() {
                 adaptors to bridge between these technologies or devleop custom
                 solutions to archive the goal of that requirement.
               </p>
+            </div>
+
+            {/* Education */}
+            <div className="flex flex-col space-y-3">
+              <h1 className="text-3xl font-semibold">Education</h1>
+
+              <div className="flex flex-col">
+                <h2 className="italic whitespace-nowrap text-xl text-gray-800 font-bold">
+                  Virginia State University
+                </h2>
+                <p>Bachelor’s Degree in Computer Science</p>
+                <span className="text-gray-500">Sep 2010 - Oct 2013</span>
+              </div>
             </div>
 
             {/* Work experience */}
