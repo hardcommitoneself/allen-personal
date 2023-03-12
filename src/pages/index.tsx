@@ -17,7 +17,7 @@ import {
 const exps: ExperienceType[] = [
   {
     role: "Senior Laravel Full Stack Engineer",
-    company: "Techno Labs",
+    company: "PCM Canada",
     color: "bg-red-500",
     type: "FULL",
     isRemote: true,
@@ -28,7 +28,7 @@ const exps: ExperienceType[] = [
   },
   {
     role: "Full Stack Developer",
-    company: "Intellectsoft",
+    company: "iQmetrix",
     color: "bg-teal-500",
     type: "FULL",
     isRemote: false,
@@ -39,7 +39,7 @@ const exps: ExperienceType[] = [
   },
   {
     role: "Software Developer",
-    company: "Quality Plus Services Inc",
+    company: "Invenia Technical Computing Corporation",
     color: "bg-orange-500",
     type: "FULL",
     isRemote: false,
@@ -217,11 +217,11 @@ export default function Home() {
         <div className="flex flex-col bg-white rounded border border-gray-100">
           {/* header */}
           <Header
-            name="Tony Incitti"
+            name="Allen Iverson"
             role="Laravel, Vue Certificated Developer"
-            location="1128 Johnson Ave, Petersburg, VA, US"
+            location="523 Ritchot St, Winnipeg, MB, Canada"
             phone="(315) 715 8471"
-            email="ti.tonyincitti@gmail.com"
+            email="ai.alleniversion@gmail.com"
           />
 
           {/* body */}
@@ -277,7 +277,7 @@ export default function Home() {
 
               <div className="flex flex-col">
                 <h2 className="italic whitespace-nowrap text-xl text-gray-800 font-bold">
-                  Virginia State University
+                  The University of Winnipeg
                 </h2>
                 <p>Bachelor’s Degree in Computer Science</p>
                 <span className="text-gray-500">Sep 2010 - Oct 2013</span>
